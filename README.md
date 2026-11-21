@@ -26,13 +26,13 @@ apt install -y python3 python3-pip iptables nftables dnsmasq curl wget
 pip3 install flask werkzeug requests jinja2 itsdangerous click blinker markupsafe
 ```
 
-2. 从本仓库的 Releases 页面下载部署包 `xhd-linux-gateway-v97.tar.gz`，上传到 VPS 的 `/root` 目录。
+2. 从本仓库的 Releases 页面下载部署包 `xhd-linux-gateway-v98.tar.gz`，上传到 VPS 的 `/root` 目录。
 
 3. 解压并安装：
 
 ```bash
 cd /
-tar -xzf /root/xhd-linux-gateway-v97.tar.gz
+tar -xzf /root/xhd-linux-gateway-v98.tar.gz
 cd /opt/xhd-linux-gateway
 chmod +x deploy.sh scripts/*.sh scripts/*.py
 bash deploy.sh
@@ -68,5 +68,6 @@ bash uninstall.sh
 
 ## 当前版本
 
+- v98（2026-11-21）：修复 L2TP 流量重复结算（一场会话被结两次）的问题；更换新部署的默认预共享密钥（已部署服务器不受影响）
+- 部署包 SHA256：`792b627085800dd4e51f3df88034ca60a05cec94f6b5569a38b550f71fcf0ed7`
 - v97（2026-11-21）：优化 L2TP 分享信息复制格式（以入站名称为标题、每字段一行）
-- 部署包 SHA256：`7469bf0977aabd5c1b3ad8747e9ff696c4376fddeb9567f4649400dc2cda5a73`
